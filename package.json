@@ -1,0 +1,54 @@
+{
+  "name": "jks-start-project",
+  "version": "1.0.0",
+  "description": "jks-start-project",
+  "scripts": {
+    "build": "gulp build",
+    "build:production": "cross-env NODE_ENV=production npm run build",
+    "start": "npm run build && gulp serve",
+    "test:style": "stylelint \"source/**/*.scss\" --syntax=scss",
+    "test:js": "eslint \"source/js\"",
+    "test": "npm run test:style --silent && npm run test:js --silent",
+    "sort": "postcss \"source/sass/blocks/*.scss\" -c postcss.config.js -d \"source/sass/blocks\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jkikksa/jks-start-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://github.com/jkikksa/jks-start-project/blob/master/README.md",
+  "devDependencies": {
+    "autoprefixer": "^7.1.1",
+    "browser-sync": "^2.18.8",
+    "browserify": "^14.3.0",
+    "cross-env": "^5.0.0",
+    "css-mqpacker": "^6.0.0",
+    "del": "^2.2.2",
+    "eslint": "^3.19.0",
+    "eslint-config-htmlacademy": "^0.2.3",
+    "gulp": "^3.9.1",
+    "gulp-csso": "^3.0.0",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^3.2.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^7.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-svgo": "^1.0.3",
+    "gulp-uglify": "^3.0.0",
+    "postcss": "^6.0.1",
+    "postcss-cli": "^4.0.0",
+    "postcss-image-inliner": "^1.0.6",
+    "postcss-scss": "^1.0.0",
+    "postcss-sorting": "^2.0.1",
+    "run-sequence": "^1.2.2",
+    "stylelint": "^7.10.1",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "dependencies": {
+    "slick-carousel": "^1.6.0"
+  }
+}

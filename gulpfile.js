@@ -141,7 +141,7 @@ gulp.task('serve', function () {
   gulp.watch(path.src.html.self, ['html']);
   gulp.watch(path.src.sass.folder, ['style']);
   gulp.watch(path.src.js.folder, ['js']);
-  gulp.watch(path.src.images.folder, ['copy']);
+  gulp.watch(path.src.images.root, ['copy']);
 });
 
 gulp.task('imagemin', function () {
